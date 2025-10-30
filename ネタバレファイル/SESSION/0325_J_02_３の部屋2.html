@@ -1,0 +1,140 @@
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    ３の部屋
+  </title>
+  <link rel="stylesheet" href="../css/style_common.css">
+  <link rel="stylesheet" href="../css/style_sidebar.css">
+  <link rel="stylesheet" href="../css/style_content.css">
+
+</head>
+
+<body>
+  <!--/サイドメニュー-->
+  <div id="sub">
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="../../アルメリアは求めない.html">
+            <font size="4">
+              TOPファイルに戻る
+            </font>
+          </a>
+          <h1>
+          </h1>
+          <br>
+        <li><a href=" 0325_昼食事の時間.html">〘Next Scene〙</a></li>
+        <br><br>※ネタバレあり<br>探索個所の説明まで進んでから<p>
+          <li><a href="mokuji.html">目次に戻る</a></li>
+        </p>
+  </div>
+  <!--/sub-->
+  <!--C+S+H htmlプレビュー-->
+  <!--/メインー-->
+  <div id="container">
+    <div id="main">
+      <h2 class="close">
+        ３の部屋
+      </h2>
+      <!--区切り-->
+      <section class="box">
+        <h4 id="setu1">scene名：0325_J_02_３の部屋2</h4>
+
+        <br>
+        <div class="bor2">
+          【３の部屋】<br>
+          御膳があなたたちを部屋に入れてくれる。<br>
+          「こんにちは！」 <br>
+          <br>
+          あなたたちを招き入れると、再び御膳と三田が、お茶を飲む。どうやら二人は、お茶を飲みながら本を読んでいたようだ。 <br>
+
+          <br>
+          以下の内容を聞いた。 <br>
+
+          <p>
+            <button class="choice-btn" data-output="pdfLinks" data-pattern="A">①館の人と事件前夜について</button>
+
+          <div id="pdfLinks" class="scene-output"></div>
+
+          </p>
+          <p>
+            <button class="choice-btn" data-output="output2" data-text="
+【0325　三田と御膳から聞いた話】<br>
+②本について<br>
+御膳「皆さんが寝ている書斎に本があるでしょう？暇つぶしに借りて読んでいるんです。すごいんですよ。三田さんが読める点字の本もあるんです！」<br>
+<br>
+三田「点字の本はなかなかないので珍しいですよね。必然的に分厚くなってしまうので、御膳さんにも手伝って運んでももらいました。」<br>
+">②本について
+            </button>
+          <div id="output2"></div>
+          </p>
+          <p>
+            <button class="choice-btn" data-output="output3" data-text="
+【0325　三田と御膳から聞いた話】<br>
+③壁の額について<br>
+
+御膳「これ、客室の各部屋で違うようですね。僕のは確か・・・心とか知識がどのように授かるのかみたいなやつでした。他には、4の部屋が謎解き？で、７も謎解き？僕が知っているのはその２つですね」
+<br><br>
+三田「私には分からないけれど、御膳くんに教えてもらったのは、目で見るとかそういう話だったかしら・・・目が見えない私の部屋にそれがあるなんて少し皮肉だわ。」
+">③壁の額について
+            </button>
+          <div id="output3"></div>
+          </p>
+
+          <p>
+            <br>三田の本が気になった <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+            <button class="choice-btn" data-output="output6" data-text="
+【３の部屋】（アイデア成功）<br>
+点字の本がここにあるということは、三田が来ることを前提としているのだろうか。それとも、もともとここには目が見えない人がいたのだろうか。どちらにしても、本だけが配慮されているのだろうか。">＜アイデア＞</button>
+          <div id="output6"></div>
+          </p>
+
+          <br>ふと壁の額が目に留まった <span class="important-span">詳しく見る</span><br>
+
+          <button onclick="showSpoiler()" class="choice-btn">【部屋の額】</button>
+
+          <div id="spoilerBox" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+
+                【３の部屋の額】<br>
+                目で見る<br>
+                耳で聞く<br>
+                口で話す<br>
+                手で伝え<br>
+                足で進む<br>
+              </p>
+            </div>
+            <img src="../img/BG/kabe3.jpeg" alt="【部屋の額】" width="60%"
+              style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+          <br>
+          <script>
+            function showSpoiler() {
+              document.getElementById("spoilerBox").style.display = "block";
+            }
+          </script>
+<br>
+
+        </div>
+        <p> 次へ<br>
+          >> <a href=" 0325_昼食事の時間.html"> 〘Next Scene〙</a>をクリック <br>
+        </p>
+        <p>
+          <img src="../img/BG/BG_部屋.jpeg" width="60%"
+            style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+        </p>
+      </section>
+    </div>
+
+  </div>
+
+  <!--/container-->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

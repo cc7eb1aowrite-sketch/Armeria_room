@@ -1,0 +1,153 @@
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    ７の部屋
+  </title>
+  <link rel="stylesheet" href="../css/style_common.css">
+  <link rel="stylesheet" href="../css/style_sidebar.css">
+  <link rel="stylesheet" href="../css/style_content.css">
+
+</head>
+
+<body>
+  <!--/サイドメニュー-->
+  <div id="sub">
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="../../アルメリアは求めない.html">
+            <font size="4">
+              TOPファイルに戻る
+            </font>
+          </a>
+          <h1>
+          </h1>
+          <br>
+        <li><a href=" 0325探索②.html">〘Next Scene〙</a></li>
+        <br><br>※ネタバレあり<br>探索個所の説明まで進んでから<p>
+          <li><a href="mokuji.html">目次に戻る</a></li>
+        </p>
+  </div>
+  <!--/sub-->
+  <!--C+S+H htmlプレビュー-->
+  <!--/メインー-->
+  <div id="container">
+    <div id="main">
+      <h2 class="close">
+        ７の部屋
+      </h2>
+      <!--区切り-->
+      <section class="box">
+        <h4 id="setu1">scene名：0325_N_01_7の部屋</h4>
+
+        <br>
+        <div class="bor2">
+          【７の部屋】<br>
+          ７の部屋の前に行く。<br>
+          部屋の扉の横には、呼び鈴がある。呼び鈴を鳴らせば、志知沢が出てくる。
+
+
+        </div>
+        <br>
+        <div class="bor2">
+          【７の部屋】<br>
+          「で、なんだよ」<br>
+          志知沢は扉をあけ、あなたたちを招き入れた。<br>
+          <br>
+          以下の内容を聞いた。 <br>
+          <P>
+            <button onclick="showSpoiler()" class="choice-btn">①館の人と事件前夜について</button>
+
+          <div id="spoilerBox" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+                【0325　志知沢から聞いた話】<br>
+                ①館の人と事件前夜について<br>
+                志知沢は口にしていく。<br>
+                <br>
+
+                <a href="../pdf/0325_志知沢_聴取.pdf" target="_blank" rel="noopener noreferrer">▶ 志知沢
+                  聴取記録（0325）</a>
+              </p>
+            </div>
+          </div>
+
+          </P>
+          <p>
+            <button class="choice-btn" data-output="output2" data-text="
+【0325　志知沢から聞いた話】<br>
+②館で起きている殺人について<br>
+「興味ない。早く外に出たいし、どうにかしてくれねえかな。別に出られるけどよ、それじゃあルール違反だしさ。あんたら頑張ってくれよ」
+">②館で起きている殺人について
+            </button>
+          <div id="output2"></div>
+          </p>
+          <p>
+            <button class="choice-btn" data-output="output3" data-text="
+【0325　志知沢から聞いた話】<br>
+③８の部屋の招待客について<br>
+「・・・あー、悪い。それは線引きがわからんから言えねえ。もっと分かりやすければ腹いせに言えるけど、分からん。1つ言うなら、そうだな、あんたらが良い人間なら早く真相とやらを発表したほうがいいと思うぜ」<br>
+「まあ、俺には良い人間も悪い人間もよくわからねえけど」
+">③８の部屋の招待客について
+            </button>
+          <div id="output3"></div>
+          </p>
+          <br>ふと壁の額が目に留まった <span class="important-span">詳しく見る</span><br>
+
+          <button onclick="showSpoiler2()" class="choice-btn">【部屋の額】</button>
+
+          <div id="spoilerBox2" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+
+                【７の部屋の額】<br>
+                古のモノにとらわれてはいけない<br>
+                それは誤った指標なのだから<br>
+                新しいモノがどこかにある<br>
+                必要なものはタコの心臓と同じ数<br>
+                ただし、それは解く必要がないもの<br>
+                それは最後の手段<br>
+                それは外への鍵
+                <br>
+
+              </p>
+            </div>
+            <img src="../img/BG/kabe.jpeg" alt="【部屋の額】" width="60%"
+              style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+          <br>
+
+          <script>
+            function showSpoiler() {
+              document.getElementById("spoilerBox").style.display = "block";
+            }
+
+            function showSpoiler2() {
+              document.getElementById("spoilerBox2").style.display = "block";
+            }
+          </script>
+          <br>
+
+
+        </div>
+        <p> 次へ<br>
+          >> <a href=" 0325探索②.html"> 〘Next Scene〙</a>をクリック <br>
+        </p>
+        <p>
+          <img src="../img/BG/BG_部屋.jpeg" width="60%"
+            style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+        </p>
+      </section>
+    </div>
+
+  </div>
+
+  <!--/container-->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

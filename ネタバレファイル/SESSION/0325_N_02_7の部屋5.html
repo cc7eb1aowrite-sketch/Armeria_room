@@ -1,0 +1,143 @@
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    ７の部屋
+  </title>
+  <link rel="stylesheet" href="../css/style_common.css">
+  <link rel="stylesheet" href="../css/style_sidebar.css">
+  <link rel="stylesheet" href="../css/style_content.css">
+
+</head>
+
+<body>
+  <!--/サイドメニュー-->
+  <div id="sub">
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="../../アルメリアは求めない.html">
+            <font size="4">
+              TOPファイルに戻る
+            </font>
+          </a>
+          <h1>
+          </h1>
+          <br>
+        <li><a href="0325_探索後_９の部屋.html">〘Next Scene〙</a></li>
+        <br><br>※ネタバレあり<br>探索個所の説明まで進んでから<p>
+          <li><a href="mokuji.html">目次に戻る</a></li>
+        </p>
+  </div>
+  <!--/sub-->
+  <!--C+S+H htmlプレビュー-->
+  <!--/メインー-->
+  <div id="container">
+    <div id="main">
+      <h2 class="close">
+        ７の部屋
+      </h2>
+      <!--区切り-->
+      <section class="box">
+        <h4 id="setu1">scene名：0325_N_02_7の部屋5</h4>
+
+        <br>
+        <div class="bor2">
+          【７の部屋】<br>
+          中に入れば部屋は歪な形だが、ビジネスホテルのような印象を受ける。また、額が飾られている。<br>
+
+          志知沢が怠そうな顔ででてきた。<br>
+
+
+          <br>
+          以下の内容を聞いた。 <br>
+          <P>
+            <button onclick="showSpoiler()" class="choice-btn">①館の人と事件前夜について</button>
+
+          <div id="spoilerBox" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+                【0325　志知沢から聞いた話】<br>
+                ①館の人と事件前夜について<br>
+                志知沢は口にしていく。<br>
+                <br>
+
+                <a href="../pdf/0325_志知沢_聴取.pdf" target="_blank" rel="noopener noreferrer">▶ 志知沢
+                  聴取記録（0325）</a>
+              </p>
+            </div>
+          </div>
+
+          </P>
+          <p>
+            <button class="choice-btn" data-output="output2" data-text="
+【0325　志知沢から聞いた話】<br>
+②もしもの話<br>
+「もしも、もしもの話だ。願望って言うか、そういうやつ。それが自分の命で成し遂げることができるとして、あんたらは、それできるか？自分の命より大事なもんってさ、ある？」
+">②もしもの話
+            </button>
+          <div id="output2"></div>
+          </p>
+          <p>
+            <button class="choice-btn" data-output="output1" data-text="
+【0325　志知沢から聞いた話】<br>
+③今後について<br>
+「あんたらってさ、この館でたらなにすんの？俺はここから出れたら、いろんなところに行って食べ歩きしてえなって。ここにきてから九重に料理教わったんだけどさ、もっといっぱい知りたくて。今は、早く出たいってそう思うよ」
+">③今後について
+            </button>
+          <div id="output1"></div>
+          </p>
+
+          <br>ふと壁の額が目に留まった <span class="important-span">詳しく見る</span><br>
+
+          <button onclick="showSpoiler2()" class="choice-btn">【部屋の額】</button>
+          <div id="spoilerBox2" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p> 【７の部屋の額】<br>
+                古のモノにとらわれてはいけない<br>
+                それは誤った指標なのだから<br>
+                新しいモノがどこかにある<br>
+                必要なものはタコの心臓と同じ数<br>
+                ただし、それは解く必要がないもの<br>
+                それは最後の手段<br>
+                それは外への鍵 <br>
+              </p>
+            </div>
+            <p>
+              <img src="../img/BG/kabe.jpeg" width="80%"
+                style="display: block; margin-left: auto; margin-right: auto;"><br>
+            </p>
+            <br>
+          </div>
+        </div>
+        <p> 話を聞いたら<br>
+          >> <a href="0325_探索後_９の部屋.html"> 〘Next Scene〙</a>をクリック <br>
+        </p>
+        <p>
+          <img src="../img/BG/BG_部屋.jpeg" width="60%"
+            style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+        </p>
+      </section>
+    </div>
+
+  </div>
+  <script>
+    function showSpoiler() {
+      document.getElementById("spoilerBox").style.display = "block";
+    }
+
+    function showSpoiler2() {
+      document.getElementById("spoilerBox2").style.display = "block";
+    }
+  </script>
+
+
+
+  <!--/container-->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

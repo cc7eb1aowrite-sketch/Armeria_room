@@ -1,0 +1,121 @@
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    キッチン
+  </title>
+  <link rel="stylesheet" href="../css/style_common.css">
+  <link rel="stylesheet" href="../css/style_sidebar.css">
+  <link rel="stylesheet" href="../css/style_content.css">
+
+</head>
+
+<body>
+  <!--/サイドメニュー-->
+  <div id="sub">
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="../../アルメリアは求めない.html">
+            <font size="4">
+              TOPファイルに戻る
+            </font>
+          </a>
+          <h1>
+          </h1>
+          <br>
+        <li><a href="0327探索②.html">〘Next Scene〙</a></li>
+        <br><br>※ネタバレあり<br>探索個所の説明まで進んでから<p>
+          <li><a href="mokuji.html">目次に戻る</a></li>
+        </p>
+  </div>
+  <!--/sub-->
+  <!--C+S+H htmlプレビュー-->
+  <!--/メインー-->
+  <div id="container">
+    <div id="main">
+      <h2 class="close">
+        キッチン
+      </h2>
+      <!--区切り-->
+      <section class="box">
+        <h4 id="setu1">scene名：0327_D_02_キッチン</h4>
+
+        <br>
+        <div class="bor2">
+          【キッチン・食糧庫】<br>
+          あなたたちは御膳と話すことにした。<br>
+          御膳はあなたたちを見据える。そこに笑顔はない。まっすぐな2色の瞳がただあなたたちを見つめていた。<br>
+          <br>
+          以下の内容を聞いた。 <br>
+          <P>
+            <button onclick="showSpoiler()" class="choice-btn">①館の人と事件前夜について</button>
+
+          <div id="spoilerBox" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+                【0327　御膳から聞いた話】<br>
+                ①館の人と事件前夜について<br>
+                御膳は口にしていく。<br>
+                <br>
+
+                <a href="../pdf/0327_御膳_聴取.pdf" target="_blank" rel="noopener noreferrer">▶ 御膳
+                  聴取記録（0327）</a>
+              </p>
+            </div>
+          </div>
+
+          </P>
+          <p>
+            <button class="choice-btn" data-output="output2" data-text="
+【0327　御膳から聞いた話】<br>
+②三田について<br>
+「・・・三田さんはよりよい場所に行ったのでしょう。彼女も苦しんでいましたから。今はその苦しみがなくなったことを祈ります。」
+">②三田について
+            </button>
+          <div id="output2"></div>
+          </p>
+          <p>
+            <button class="choice-btn" data-output="output3" data-text="
+【0327　御膳から聞いた話】<br>
+③死というもの<br>
+「・・・皆さんは、死とはなんだと思いますか。よく人は二度死ぬ。一度目は肉体で、２度目は忘れ去られたときだって聞いたりしますが、なら、この館で死んだ方はまだ2度目の死は訪れていない。まだ死んでいて生きているということなのでしょうか。皆さんは心臓を動かし、脳で考え、酸素を吸って楽しいですか」<br>
+<br>
+無表情で語る御膳に、どこかしっくりくるものがあった。まるでこれが本来の御膳のようだと。
+">③死というもの
+            </button>
+          <div id="output3"></div>
+          </p>
+        </div>
+        <p> 調査を終えたら<br>
+          >> <a href="0327探索②.html"> 〘Next Scene〙</a>をクリック <br>
+        </p>
+        <p>
+          <img src="../img/BG/BG_キッチン.jpeg" width="60%"
+            style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+        </p>
+
+
+        <script>
+          function showSpoiler() {
+            document.getElementById("spoilerBox").style.display = "block";
+          }
+
+        </script>
+
+
+      </section>
+
+
+    </div>
+
+  </div>
+
+  <!--/container-->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

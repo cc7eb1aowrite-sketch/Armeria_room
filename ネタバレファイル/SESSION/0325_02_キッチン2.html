@@ -1,0 +1,126 @@
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    キッチン
+  </title>
+  <link rel="stylesheet" href="../css/style_common.css">
+  <link rel="stylesheet" href="../css/style_sidebar.css">
+  <link rel="stylesheet" href="../css/style_content.css">
+
+</head>
+
+<body>
+  <!--/サイドメニュー-->
+  <div id="sub">
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="../../アルメリアは求めない.html">
+            <font size="4">
+              TOPファイルに戻る
+            </font>
+          </a>
+          <h1>
+          </h1>
+          <br>
+        <li><a href="0325_昼食事の時間.html">〘Next Scene〙</a></li>
+        <br><br>※ネタバレあり<br>探索個所の説明まで進んでから<p>
+          <li><a href="mokuji.html">目次に戻る</a></li>
+        </p>
+  </div>
+  <!--/sub-->
+  <!--C+S+H htmlプレビュー-->
+  <!--/メインー-->
+  <div id="container">
+    <div id="main">
+      <h2 class="close">
+        キッチン
+      </h2>
+      <!--区切り-->
+      <section class="box">
+        <h4 id="setu1">scene名：0325_02_キッチン2</h4>
+
+        <br>
+        <div class="bor2">
+          【キッチン・食糧庫】<br>
+          あなたたちは志知沢と話すことにした。<br>
+          志知沢は「仕方がねえな」と言い、昼食を九重に任せる。<br>
+          九重も了承することだろう。<br>
+
+          <br>
+          以下の内容を聞いた。 <br>
+          <P>
+            <button onclick="showSpoiler()" class="choice-btn">①館の人と事件前夜について</button>
+
+          <div id="spoilerBox" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+                【0325　志知沢から聞いた話】<br>
+                ①館の人と事件前夜について<br>
+                志知沢は口にしていく。<br>
+                <br>
+
+                <a href="../pdf/0325_志知沢_聴取.pdf" target="_blank" rel="noopener noreferrer">▶ 志知沢
+                  聴取記録（0325）</a>
+              </p>
+            </div>
+          </div>
+
+          </P>
+          <p>
+            <button class="choice-btn" data-output="output2" data-text="
+【0325　志知沢から聞いた話】<br>
+②館で起きている殺人について<br>
+「興味ない。早く外に出たいし、どうにかしてくれねえかな。別に出られるけどよ、それじゃあルール違反だしさ。あんたら頑張ってくれよ」
+">②館で起きている殺人について
+            </button>
+          <div id="output2"></div>
+          </p>
+          <p>
+            <button class="choice-btn" data-output="output3" data-text="
+③気になる人物について<br>
+志知沢はなにか思い立ったように、あなたたちの中で一人の腕をつかむと引き寄せる。<br>
+そして耳元で囁いた。<br>
+「一ノ瀬と双葉、陸良には気を付けたほうがいいぜ。」<br>
+<br>
+そう言うと手を放し、「気になるやつを言うと思ったか？そんなの分からねえよ。デザートは今言った通りだ。他のやつらには内緒だぜ」と笑った。<br>
+
+">③気になる人物について
+            </button>
+          <div id="output3"></div>
+          </p>
+
+
+          <script>
+            function showSpoiler() {
+              document.getElementById("spoilerBox").style.display = "block";
+            }
+
+            function showSpoiler2() {
+              document.getElementById("spoilerBox2").style.display = "block";
+            }
+          </script>
+
+
+        </div>
+        <p> 話を聞いたら<br>
+          >> <a href="0325_昼食事の時間.html"> 〘Next Scene〙</a>をクリック <br>
+        </p>
+        <p>
+          <img src="../img/BG/BG_キッチン.jpeg" width="60%"
+            style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+        </p>
+      </section>
+    </div>
+
+  </div>
+
+  <!--/container-->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

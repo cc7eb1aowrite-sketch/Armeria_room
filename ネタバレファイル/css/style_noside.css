@@ -1,0 +1,27 @@
+body.no-sidebar #menubar {
+    display: none;
+}
+
+body.no-sidebar #container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* ← 親ページと馴染ませる */
+  overflow: hidden;
+}
+section.box3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+div.bor2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}

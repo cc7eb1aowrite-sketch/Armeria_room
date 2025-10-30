@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #ededed;
+  background-color: #062121;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+a {
+  font-size: 16px;
+  color: #5df0eb;
+  transition: 0.5s;
+}
+a:hover {
+  color: #ff92d9;
+}

@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+
+/*lightbox.css̓
+---------------------------------------------------------------------------*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css);
+
+
+/*Google Fonts
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+
+
+/* ----------------------------------------
+   ページ全体の基本設定
+---------------------------------------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  /* 基本の文字サイズ */
+  /* font-family: 'Yu Mincho', 'YuMincho', serif; */
+  font-family: 'Noto Sans JP', sans-serif;
+  /* 和文明朝体フォント */
+  color: #ededed;
+  /* 文字色 */
+  background-color: #062121;
+  /* 背景 */
+  line-height: 1.7;
+  /* 行間*/
+  letter-spacing: 1px;
+  /* 文字間隔 */
+}
+
+/* サイドバーなし用のレイアウト */
+body.no-sidebar #container {
+  margin: 0% auto 0 auto; /* 中央寄せ */
+  width: 100%;
+}
+
+body.no-sidebar #menubar {
+  display: none; /* サイドバー非表示 */
+}
+
+
+/* ----------------------------------------
+   リンクのスタイル設定
+---------------------------------------- */
+a {
+  font-size: 16px;
+  /* リンク文字サイズ */
+  color: #5df0eb;
+  /* 通常時のリンク色 */
+  transition: 0.5s;
+  /* ホバー時の色変化を滑らかに */
+}
+
+a:hover {
+  color: #ff92d9;
+  /* ホバー時のリンク色（赤紫） */
+}
+
+/* ----------------------------------------
+   サイドバー（sub）
+---------------------------------------- */
+#menubar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 25%;
+  padding-top: 5%;
+  overflow: auto;
+  height: 100vh;
+}
+
+/* サイドバー内のリスト調整 */
+#menubar ul {
+  padding-left: 10;
+}
+
+#menubar li {
+  padding-left: 20;
+}
+
+
+/* ----------------------------------------
+   メニューバーのスタイル
+---------------------------------------- */
+#menubar {
+  font-size: 12px;
+  font-family: 'Noto Sans JP', serif;
+  /* 英文装飾フォント */
+  margin-left: -0.2em;
+  /* 左に少しずらす */
+}
+/* ----------------------------------------
+   レイアウト：メインコンテナ
+---------------------------------------- */
+#container {
+  clear: both;
+  /* 浮動要素の回避 */
+  height: 100%;
+  max-width: 1300px;
+  /* 最大幅を指定 */
+  margin: 5% 4% 0 25%;
+  /* 上・右・下・左の余白（左にサイドバーを想定） */
+}
+
+
+
+
+/* メインエリアの設定 */
+#main {
+  overflow: hidden;
+  /* はみ出た要素を隠す */
+}
+
+/* ----------------------------------------
+   見出しスタイル（h2, h3, h4）
+---------------------------------------- */
+#main h2,
+#main h4 {
+  clear: both;
+  /* 浮動要素の回避 */
+  margin-bottom: 5px;
+  /* 下に余白 */
+  display: block;
+  /* ブロック要素として表示 */
+  font-family: 'Noto Sans JP', serif;
+  font-weight: normal;
+  /* 通常の太さ */
+  padding-bottom: 3px;
+  letter-spacing: 0.4em;
+  /* 文字間隔 */
+}
+
+#main h2 {
+  font-size: 25px;
+  /* 大きめの見出し */
+  text-align: center;
+}
+
+#main h3 {
+  position: relative;
+  padding: 1rem .5rem;
+  font-size: 17px;
+}
+
+h3:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: '';
+  border-radius: 3px;
+  background-image: linear-gradient(to left, #859A93 0%, #e2a6d4 100%);
+}
+
+#main h3:first-letter {
+  font-size: 130%;
+    color: #a3f6a7;
+}
+
+#main h4 {
+  font-size: 20px;
+}
+
+/* h4の最初の文字だけ強調 */
+#main h4:first-letter {
+  font-size: 150%;
+  /* 文字サイズを大きく */
+  color: #a3f6a7;
+  /* グレー系の色で強調 */
+}
+
+/* ----------------------------------------
+   段落のスタイル
+---------------------------------------- */
+#main p {
+  padding: 0 5px 5px;
+  /* 左右と下に余白 */
+}
+
+/* 見出し直後の段落のマージン調整（詰める） */
+#main h2+p,
+#main h3+p,
+#main h4+p {
+  margin-top: -10px;
+}
+
+/* ----------------------------------------
+   コンテンツボックス（白背景の枠）
+---------------------------------------- */
+#main .box {
+  overflow: hidden;
+  padding: 3%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+  border: 1px solid #fff;
+  border-radius: 20px;
+  /* 角を丸く */
+}
+
+#main .box3 {
+  overflow: hidden;
+  padding: 3%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+
+}
+
+/* テキストの配置 */
+#main .headC {
+  text-align: center;
+}
+
+#main .headL {
+  text-align: left;
+}
+
+/* ----------------------------------------
+   スパン見出し（midasi1, midasi2, midasi3）
+---------------------------------------- */
+#main span.important-span {
+  font-weight: 900;
+  /* 最大級の太さで強調 */
+  font-family: 'Noto Sans JP', 'Georgia', serif;
+  /* 装飾的で力強い印象のフォントに変更（Google Fontsで読み込み済み） */
+  color: #670d0d;
+  /* 深みのある赤紫で注目度をキープ */
+  letter-spacing: 0.08em;
+  /* 文字間隔をさらに広げて高級感を演出 */
+  text-transform: uppercase;
+  /* すべて大文字にして力強さを演出（任意） */
+      background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+  border-radius: 0px;
+  /* 角を丸く */
+}
+
+#main span.next-span {
+
+  position: relative;
+  font-weight: 900;
+  /* 最大級の太さで強調 */
+  font-family: 'Noto Sans JP', 'Georgia', serif;
+  /* 装飾的で力強い印象のフォントに変更（Google Fontsで読み込み済み） */
+  color: #0655ff;
+  /* 深みのある赤紫で注目度をキープ */
+  letter-spacing: 0.08em;
+  /* 文字間隔をさらに広げて高級感を演出 */
+  text-transform: uppercase;
+  /* すべて大文字にして力強さを演出（任意） */
+    background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+  border-radius: 0px;
+  /* 角を丸く */
+  
+
+}
+
+/* ----------------------------------------
+   枠線付きボックス（装飾用）
+---------------------------------------- */
+#main div.bor1 {
+  border: ridge 1px #bbc8e6;
+  /* 凹凸のある枠線 */
+  padding: 3px 10px;
+}
+
+#main div.bor2 {
+  border: ridge 1px #c0c6c9;
+  padding: 3px 10px;
+}
+
+
+
+/* ----------------------------------------
+   ボタンのスタイル
+---------------------------------------- */
+#main .btn-text-3d {
+  text-decoration: none;
+  /* 下線を消す（リンク風の装飾をなくす） */
+  font-weight: bold;
+  /* 太字にする */
+  font-size: 37px;
+  /* 大きめの文字サイズに設定 */
+  color: #f8d2ff;
+  /* 明るい青色の文字色 */
+
+  /* テキストに複数の影を重ねて、立体感を演出 */
+  text-shadow:
+    0px 4px 2px rgba(0, 0, 0, 0.32),
+    /* 黒っぽい影（ぼかしあり）で奥行きを表現 */
+    0px 1px 0px #3e8651,
+    /* 少し濃い青の影（1px下） */
+    0px 2px 0px #a74f92,
+    /* さらに濃い青（2px下） */
+    0px 3px 0px #361228;
+  /* 最も濃い青（3px下）で深みを出す */
+}
+
+#main .btn-text-3d:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow:
+    0px 4px 2px rgba(0, 0, 0, 0.5),
+    0px 1px 0px #ff92d9,
+    0px 2px 0px #ff5eaa,
+    0px 3px 0px #ff2e9a;
+}
+
+#main  .iconIMG {
+float: right;
+ width: 60px;         /* 横幅固定 */
+  height: auto;        /* 高さは自動調整（縦横比を保つ） */
+
+}
+#main .choice-btn {
+  background-color: #b2ccc4;       /* ピンク系の背景色 */
+  color: rgb(70, 121, 121);                    /* 文字色 */
+  border: none;                    /* 枠線なしでスッキリ */
+  border-radius: 30px;             /* 丸みのある形状 */
+  padding: 5px 5px;              /* 内側の余白でふっくら */
+  font-size: 16px;                 /* 読みやすいサイズ */
+  cursor: pointer;                 /* ホバー時にポインター表示 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* ふんわり影で立体感 */
+  transition: all 0.3s ease;       /* なめらかな変化 */
+}
+
+#main .choice-btn:hover {
+  background-color: #cb9696;       /* 明るめに変化 */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3); /* 影も強調 */
+}
+
+#main .line {
+  width: 70%;
+  height: 2px;
+  background-color: #aebbb0;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#main .details {
+  border: 1px solid #ccc;         /* 枠線 */
+  padding: 8px;                   /* 内側の余白 */
+  background-color: #f9f9f9;      /* 背景色（薄いグレー） */
+  border-radius: 5px;             /* 角を丸くする */
+  margin-bottom: 10px;            /* 下の余白 */
+}
+
+#main .details summary {
+  font-weight: bold;              /* 太字にする */
+}
+
+#main details details {
+  margin-left: 40px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; ← これが重要！ */
+}

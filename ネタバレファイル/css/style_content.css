@@ -1,0 +1,533 @@
+/* メインエリアの設定 */
+#main {
+  overflow: hidden;
+  /* はみ出た要素を隠す */
+}
+
+/* ----------------------------------------
+   見出しスタイル（h2, h3, h4）
+---------------------------------------- */
+#main h2,
+#main h4 {
+  clear: both;
+  /* 浮動要素の回避 */
+  margin-bottom: 5px;
+  /* 下に余白 */
+  display: block;
+  /* ブロック要素として表示 */
+  font-family: 'Noto Sans JP', serif;
+  font-weight: normal;
+  /* 通常の太さ */
+  padding-bottom: 3px;
+  letter-spacing: 0.4em;
+  /* 文字間隔 */
+}
+
+#main h2 {
+  font-size: 25px;
+  /* 大きめの見出し */
+  text-align: center;
+}
+
+#main h3 {
+  position: relative;
+  padding: 1rem .5rem;
+  font-size: 17px;
+}
+
+h3:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: '';
+  border-radius: 3px;
+  background-image: linear-gradient(to left, #859A93 0%, #e2a6d4 100%);
+}
+
+#main h3:first-letter {
+  font-size: 130%;
+  color: #a3f6a7;
+}
+
+#main h4 {
+  font-size: 20px;
+}
+
+/* h4の最初の文字だけ強調 */
+#main h4:first-letter {
+  font-size: 150%;
+  /* 文字サイズを大きく */
+  color: #a3f6a7;
+  /* グレー系の色で強調 */
+}
+
+
+#main h5 {
+  position: relative;
+  padding: 1rem .5rem;
+  font-size: 18px;
+}
+
+h5:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 6px;
+  content: '';
+  border-radius: 1px;
+  background-image: linear-gradient(to left, #678b7f 0%, #a6bfe2 100%);
+}
+
+
+
+/* ----------------------------------------
+   段落のスタイル
+---------------------------------------- */
+#main p {
+  padding: 0 5px 5px;
+  /* 左右と下に余白 */
+}
+
+/* 見出し直後の段落のマージン調整（詰める） */
+#main h2+p,
+#main h3+p,
+#main h4+p {
+  margin-top: -10px;
+}
+
+/* ----------------------------------------
+   コンテンツボックス（白背景の枠）
+---------------------------------------- */
+#main .box {
+  overflow: hidden;
+  padding: 3%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+  border: 1px solid #fff;
+  border-radius: 20px;
+  /* 角を丸く */
+}
+
+#main .box3 {
+  overflow: hidden;
+  padding: 3%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+
+}
+
+/* テキストの配置 */
+#main .headC {
+  text-align: center;
+}
+
+#main .headL {
+  text-align: left;
+}
+
+/* ----------------------------------------
+   スパン見出し（midasi1, midasi2, midasi3）
+---------------------------------------- */
+#main span.important-span {
+  font-weight: 900;
+  /* 最大級の太さで強調 */
+  font-family: 'Noto Sans JP', 'Georgia', serif;
+  /* 装飾的で力強い印象のフォントに変更（Google Fontsで読み込み済み） */
+  color: #670d0d;
+  /* 深みのある赤紫で注目度をキープ */
+  letter-spacing: 0.08em;
+  /* 文字間隔をさらに広げて高級感を演出 */
+  text-transform: uppercase;
+  /* すべて大文字にして力強さを演出（任意） */
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+  border-radius: 0px;
+  /* 角を丸く */
+}
+
+#main span.next-span {
+
+  position: relative;
+  font-weight: 900;
+  /* 最大級の太さで強調 */
+  font-family: 'Noto Sans JP', 'Georgia', serif;
+  /* 装飾的で力強い印象のフォントに変更（Google Fontsで読み込み済み） */
+  color: #0655ff;
+  /* 深みのある赤紫で注目度をキープ */
+  letter-spacing: 0.08em;
+  /* 文字間隔をさらに広げて高級感を演出 */
+  text-transform: uppercase;
+  /* すべて大文字にして力強さを演出（任意） */
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明の白背景 */
+  border-radius: 0px;
+  /* 角を丸く */
+
+
+}
+
+/* ----------------------------------------
+   枠線付きボックス（装飾用）
+---------------------------------------- */
+#main div.bor1 {
+  border: ridge 2px #4f7ac9;
+  /* 凹凸のある枠線 */
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.078);
+  /* 半透明の白背景 */
+  border-radius: 20px;
+  /* 角を丸く */
+}
+
+#main div.bor2 {
+  border: ridge 1px #c0c6c9;
+  padding: 3px 10px;
+}
+
+
+#main div.dotted-box {
+  border: 3px dotted #073b3974;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.078);
+  /* 半透明の白背景 */
+  border-radius: 20px;
+  /* 角を丸く */
+}
+
+/* ----------------------------------------
+   ボタンのスタイル
+---------------------------------------- */
+#main .btn-text-3d {
+  text-decoration: none;
+  /* 下線を消す（リンク風の装飾をなくす） */
+  font-weight: bold;
+  /* 太字にする */
+  font-size: 25px;
+  /* 大きめの文字サイズに設定 */
+  color: #f8d2ff;
+  /* 明るい青色の文字色 */
+
+  /* テキストに複数の影を重ねて、立体感を演出 */
+  text-shadow:
+    0px 4px 2px rgba(0, 0, 0, 0.32),
+    /* 黒っぽい影（ぼかしあり）で奥行きを表現 */
+    0px 1px 0px #3e8651,
+    /* 少し濃い青の影（1px下） */
+    0px 2px 0px #a74f92,
+    /* さらに濃い青（2px下） */
+    0px 3px 0px #361228;
+  /* 最も濃い青（3px下）で深みを出す */
+}
+
+#main .btn-text-3d:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow:
+    0px 4px 2px rgba(0, 0, 0, 0.5),
+    0px 1px 0px #ff92d9,
+    0px 2px 0px #ff5eaa,
+    0px 3px 0px #ff2e9a;
+}
+
+#main .iconIMG {
+  float: right;
+  width: 60px;
+  /* 横幅固定 */
+  height: auto;
+  /* 高さは自動調整（縦横比を保つ） */
+
+}
+
+#main .choice-btn {
+  background-color: #b2ccc4;
+  /* ピンク系の背景色 */
+  color: rgb(70, 121, 121);
+  /* 文字色 */
+  border: none;
+  /* 枠線なしでスッキリ */
+  border-radius: 30px;
+  /* 丸みのある形状 */
+  padding: 5px 5px;
+  /* 内側の余白でふっくら */
+  font-size: 16px;
+  /* 読みやすいサイズ */
+  cursor: pointer;
+  /* ホバー時にポインター表示 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* ふんわり影で立体感 */
+  transition: all 0.3s ease;
+  /* なめらかな変化 */
+}
+
+#main .choice-btn:hover {
+  background-color: #cb9696;
+  /* 明るめに変化 */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  /* 影も強調 */
+}
+
+
+#main .choice-btn2 {
+
+  background-color: #b2ccc4;
+  /* ピンク系の背景色 */
+  color: rgb(35, 78, 78);
+  /* 文字色 */
+  border: none;
+  /* 枠線なしでスッキリ */
+  border-radius: 30px;
+  /* 丸みのある形状 */
+  padding: 5px 5px;
+  /* 内側の余白でふっくら */
+  font-size: 18px;
+  /* 読みやすいサイズ */
+  cursor: pointer;
+  /* ホバー時にポインター表示 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* ふんわり影で立体感 */
+  transition: all 0.3s ease;
+  /* なめらかな変化 */
+    width: 80%;  /* 幅を固定 */
+    display: block;
+  margin: 0 auto;
+}
+
+#main .choice-btn2:hover {
+  background-color: #cb9696;
+  /* 明るめに変化 */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  /* 影も強調 */
+}
+
+
+#main .line {
+  width: 70%;
+  height: 2px;
+  background-color: #aebbb0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#main .details {
+  border: 1px solid #ccc;
+  /* 枠線 */
+  padding: 8px;
+  /* 内側の余白 */
+  background-color: #f9f9f9;
+  /* 背景色（薄いグレー） */
+  border-radius: 5px;
+  /* 角を丸くする */
+  margin-bottom: 10px;
+  /* 下の余白 */
+}
+
+#main .details summary {
+  font-weight: bold;
+  /* 太字にする */
+}
+
+#main details details {
+  margin-left: 40px;
+}
+
+#main .left-pad {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#main .output-area {
+  margin: 0;
+  padding: 0;
+}
+
+#main .output-area p {
+  margin: 0;
+  padding: 0 5px 5px;
+  /* 左右と下だけ余白（既存と合わせる） */
+}
+
+#main .line {
+  margin: 0;
+  padding: 0;
+}
+
+#main .midasi1 {
+
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #f1fffd;
+  border-bottom: 2px solid #999;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  font-family: 'Georgia', serif;
+
+}
+
+
+.mystery-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+}
+
+
+.mystery-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+}
+
+.mystery-table th,
+.mystery-table td {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding: 0.6em;
+  word-wrap: break-word;
+}
+
+.mystery-table th:nth-child(1),
+.mystery-table td:nth-child(1) {
+  width: 10%;
+}
+
+.mystery-table th:nth-child(2),
+.mystery-table td:nth-child(2) {
+  width: 12%;
+}
+
+.mystery-table th:nth-child(3),
+.mystery-table td:nth-child(3) {
+  width: 38%;
+}
+
+.mystery-table th:nth-child(4),
+.mystery-table td:nth-child(4) {
+  width: 20%;
+}
+
+.mystery-table th:nth-child(5),
+.mystery-table td:nth-child(5) {
+  width: 20%;
+}
+
+
+.exploration-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+
+}
+
+.exploration-table td.date-cell {
+  background-color: #f5f5f5;
+  /* 控えめな背景色で区切り感 */
+  border-right: 2px solid #ffffff;
+  /* 枠線を太く */
+  font-weight: bold;
+  color: #333;
+}
+
+.exploration-table th,
+.exploration-table td {
+  border: 1px solid #ccc;
+  padding: 0.4em;
+  text-align: center;
+  word-break: break-word;
+
+
+}
+
+/* ヘッダー固定 */
+.exploration-table th {
+  position: sticky;
+  top: 0;
+  background-color: #404742;
+  z-index: 2;
+}
+
+.place談話室 {
+  background-color: hsla(240, 40%, 65%, 0.6);
+}
+
+/* 青系 */
+.place書斎 {
+  background-color: hsla(45, 40%, 65%, 0.6);
+}
+
+/* 黄系 */
+.place庭 {
+  background-color: hsla(150, 40%, 65%, 0.6);
+}
+
+/* 緑系 */
+.place隠し部屋 {
+  background-color: hsla(270, 40%, 60%, 0.6);
+}
+
+/* 紫系 */
+.placeキッチン {
+  background-color: hsla(30, 40%, 65%, 0.6);
+}
+
+/* オレンジ系 */
+.place部屋 {
+  background-color: hsla(0, 40%, 65%, 0.6);
+  /* 赤系 */
+}
+
+.place倉庫 {
+  background-color: hsla(180, 40%, 65%, 0.6);
+}
+
+/* 水色系 */
+.place食堂 {
+  background-color: hsla(330, 40%, 65%, 0.6);
+}
+
+/* ピンク系 */
+.placeホール {
+  background-color: hsla(210, 40%, 65%, 0.6);
+}
+
+/* 薄青系 */
+
+
+
+.table1 {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+}
+
+.table1 th,
+.table1 td {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding: 0.6em;
+  word-wrap: break-word;
+}
+
+.table1 th:nth-child(1),
+.table1 td:nth-child(1) {
+  width: 20%;
+}
+
+.table1 th:nth-child(2),
+.table1 td:nth-child(2) {
+  width: 80%;
+}

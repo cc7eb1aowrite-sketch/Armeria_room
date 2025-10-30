@@ -1,0 +1,86 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+            <p>
+                <br> 【探索のアイコン】＊カーテン＊ <span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output1" data-text="
+【談話室のカーテン】 <br>
+カーテンを開くと気づく。そこにあるのは液晶モニターだった。
+外の風景を映し出すモニターだが、その映像からこの館の外をリアルでうつしてはいないことは分かった。">＜自動取得＞</button>
+            <div id="output1" ></div>
+            </p>
+
+            <p>
+                <br>【探索のアイコン】＊部屋全体＊<span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output2" data-text="
+【談話室全体】（アイデア成功）<br>
+床や壁や家具に大きな傷や破損はない。いくつか棚に飾り物があるがそれも壊れている様子もない。激しい争いは起きなかったように見える。">＜アイデア＞
+                </button>
+            <div id="output2"></div>
+            </p>
+            <p>
+                <br> 【探索のアイコン】＊談話室にある家具＊<span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output5" data-text="
+【談話室の家具】（自動取得）<br>
+一人用の椅子とその床に小さな真新しい傷がある。経年劣化によるものには見えない。
+">＜自動取得＞</button>
+
+            <div id="output5"></div>
+
+            </p>
+            <p>
+                <br> 【談話室の家具】を見たら、クリック <span class="important-span">【HO：解き明かすもの】のみクリック可能</span><br>
+                <button class="choice-btn" data-output="output3" data-text="
+【談話室の家具】（自動取得）<br>
+もしかしたら、市川が殺された際にできた傷なのだろうか。となれば、市川の殺害現場もここになる。">＜自動取得＞</button>
+            <div id="output3"></div>
+            </p>
+        </div>
+
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

@@ -1,0 +1,81 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+            【食堂】 <br>
+            10人程度座れるテーブルとそれに対して椅子がある。 <br>
+            窓にはカーテンがかけられている。 <br>
+            <br>
+            中には誰もいない。 <br>
+            <br>
+            <br> 【食堂の扉】 <span class="important-span">詳しく見る</span><br>
+            <button class="choice-btn" data-output="output1" data-text="
+【食堂の扉】（自動取得） <br>
+キッチンへ続く扉。 <br>
+軽やかに動き、あまり開閉に力もいらない。特に鍵などもないようだ。。">＜自動取得＞</button>
+            <div id="output1"></div>
+            </p>
+
+            <p>
+                <br>【食堂―大きな窓】 <span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output2" data-text="
+【食堂―大きな窓】（自動取得）<br>
+カーテンを開いてみるとそこに現れたのは液晶パネルだ。外の世界を映した映像によって、窓があると錯覚を起こしたのだろう。しかし、映し出しているものはその景色からリアルタイムではないようだ。。">＜自動取得＞
+                </button>
+            <div id="output2"></div>
+            </p>
+            <p>
+                <br> 【食堂―テーブル】<span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output5" data-text="
+【食堂―テーブル】（目星成功）<br>
+昨日御膳が座っていた席の付近の床に小さな傷がある。なにか食器が落ちたのだろうか。
+">＜目星＞</button>
+            <div id="output5"></div>
+            </p>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

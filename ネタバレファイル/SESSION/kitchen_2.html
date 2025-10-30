@@ -1,0 +1,122 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+
+
+            廊下側からキッチンへと入ると、どうやら食糧庫のようだ。扉は固く開閉しにくい。<br>
+            <br>
+            【食糧庫】<br>
+            食糧庫には様々な常温保存可能なものが充分にある。<br>
+            <br>
+            【キッチン】<br>
+            整理整頓され長辺２ｍほどありそうな大きな調理台が目に付く。<br>
+            <br>
+            なにか調理をしたい場合<br>
+            >>　＜DEX×５＞　or ＜料理系技能＞<br>
+            スペシャル・クリティカルした場合のみ、物凄く美味しくできたSAN値回復＋1d2<br>
+            <br>
+            <p>
+                <br>【食品棚】<span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output5" data-text="
+【キッチン】<br>
+以下の２つを見つけた<br>
+<br>
+①一部の食品棚に何かテープを張り付けた後がある。<br>
+<br>
+②誰でも簡単美味しいレシピ<br>
+→初心者でもわかる優しい料理本。これを見て料理を作ればきっとうまくできるだろう<br>
+（PL向け：料理技能の成功値が＋２０）<br>
+">＜自動取得＞</button>
+            <div id="output5"></div>
+            </p>
+
+            <p>
+                <br> 【探索のアイコン】＊調理台＊ <span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output9" data-text="
+【キッチン】（目星成功）<br>
+大きな調理台に真新しい傷があることに気が付く。<br>
+包丁でつけたにしては不自然な傷に、この調理場全体をよく見ることにした。
+すると、床に排水溝があるのに気が付く。暗い排水溝に白く小さな骨が引っかかっていた。">＜目星＞</button>
+            <div id="output9"></div>
+            </p>
+            <p>
+                <br> あたりを見渡す <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+                <button class="choice-btn" data-output="output3" data-text="
+【キッチン】（任意技能成功）<br>
+すべての食器は０～９までの数字が刻印されているようだ。それぞれ４セットずつある。自分たちが使っていたのは０の数字のモノで、２と３、５、７の刻印されたものの数が合わない。">＜調べるにふさわしい任意技能＞</button>
+            <div id="output3"></div>
+            </p>
+
+            <p>
+                <br>あたりを見渡す <span class="important-span">【HO：解き明かすもの】のみ成功したらクリック可能</span><br>
+                <button class="choice-btn" data-output="output2" data-text="
+【キッチン】（任意技能成功） <br>
+違和感を覚えた。調べてみると、扉だ。外壁側に隠し扉が１つある。ちょっとした仕掛けはあるようだが、なんとか開きそうだ。 <br>
+【扉のアイコン】をクリック
+">＜調べるにふさわしい任意技能＞
+                </button>
+            <div id="output2"></div>
+            </p>
+
+
+
+            <p>
+                <br> 【扉のアイコン】<span class="important-span">指示があった場合のみクリック</span><br>
+                <button class="choice-btn" data-output="output1" data-text="
+そっと開く。薄暗い場所へと続いていた <br> <br>
+PLへ <br>
+あなたたちは隠し通路を見つけた。 <br>
+次回探索以降、隠し通路に行くことができる。ただし、探索1回分としてカウントされるため注意。 <br>
+ <br>
+隠し通路へ行くためには、次回以降の探索時間で隠し扉がある場所へ行き「【青い扉】をクリック」すること <br>
+">【扉のアイコン】</button>
+            <div id="output1"></div>
+            </p>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

@@ -1,0 +1,182 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+            <div class="bor2">
+                【書斎】<br>
+                書斎に入る。本棚には学問書のジャンルが多く、辞書や図鑑などが置いてあるように見える。他にはソファーがある。<br>
+                <p>
+                    <button class="choice-btn" data-output="output1"
+                        data-text="【書斎】（自動取得）<br>「かるた」という本を見つける。この書斎には、少し異色だ。<br><br>【要約】<br>かるた：もとはポルトガル語の「carta」が語源で遊戯や博打に使用される札や、遊戯そのものを指す<br>かるたにも種類があり、日本では主に、花札、歌がるた、いろはかるた、トランプ（西洋かるた）などが有名である。<br><br>花札（花かるた、花がるた）：48枚、12か月を草木や花が描かれ花鳥風月が表現されているもの。48枚というカード構成はポルトガルが由来。草木や花の絵柄にすることで数字を隠し、賭博禁止の抜け道としても使用されたことがある。<br><br>歌がるた：文字札・絵札ともに、あいうえお46枚ずつの読み札・取り札が用意されている。なお、小倉百人一首の場合は絵札ではなく文字札とし、1番の天智天皇の歌から100番の順徳院の歌までを上の句、下の句で分けたもので行う。<br><br>トランプ（西洋かるた）：起源は諸説あり、エジプトや中国、インドなどと言われることが多い。日本では、英米式の4種各13枚の計52枚 (+ジョーカー) を1セットにしたものが明治以降に普及した。<br><br>いろはかるた：いろは47文字に対応したことわざを使用。ただし、内容は場所によって、異なる<br>例：江戸→犬も歩けば棒に当たる、上方→一寸先は闇、尾張→一を聞いて十を知る">【書斎】（自動取得）</button>
+                </p>
+                <div id="output1" class="scene-output">
+
+                </div><br>
+                <br> あたりを見渡す <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+                <button class="choice-btn" data-output="output11" data-text="
+あなたは手がかりを見つけることだろう。 <br>
+本棚の＜図書館＞1回分を自動成功扱いにする。">＜任意の好きな技能＞</button>
+                <div id="output11"></div>
+
+
+                <p>
+                    <br>あたりを見渡す <span class="important-span">【HO：解き明かすもの】のみ成功したらクリック可能</span><br>
+                    <button class="choice-btn" data-output="output12" data-text="
+あなたはその頭脳で手がかりを見つけることだろう。 <br>
+本棚の＜図書館＞1回分を自動成功扱いにする。
+">＜任意の知識系技能＞
+                    </button>
+                <div id="output12"></div>
+                </p> <br>
+                <p>
+
+                    【探索のアイコン】＊本棚＊<br>
+                    書斎の本を眺め気になることはないだろうか<br>
+                    <br>
+                    1人３回可能　＜図書館＞<br>
+                </p>
+
+            </div>
+            <br>
+            <div class="bor2">
+            
+                <p>        
+                    <button class="choice-btn" data-output="output17" data-text="
+                あなたたちは、書斎の本棚で気になるものを見つけた。 <br>
+                図書館成功した数だけ、１ｄ８を振り、番号と同じアイコンをクリック <br>
+                【HO：解き明かすもの】【HO：支え繋ぐもの】は＜図書館＞成功情報取得前に実施推奨 <br>
+                <br>
+                ※番号が同じ場合は、任意の数字を選択して構わない <br>
+                ※必要に応じて、スクリーンパネルから【図書館情報】を表示させてください。スクリーンパネルの番号と情報の番号は同じです。 <br>
+                例：①の情報＝【図書館情報①】 <br>
+                ※クリックアクションによるテキストは、選択中のタブに送信されます。 <br>
+                よろしければ【情報】タブを選択し、クリックしてください。 <br>
+                <br>
+">図書館成功時
+                    </button>
+                <div id="output17"></div>
+                </p> <br>
+
+                <p>
+                    <br> 本棚の本の並びに何か規則性はないだろうか <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+                    <button class="choice-btn" data-output="output14" data-text="
+【書斎―書籍情報】（目星成功情報） <br>
+３，４，５，７，８ <br>
+→どうやら何かの記事のスクラップのようだ。 <br>
+ <br>
+成功情報1回分を１ｄ８の結果ではなく好きな番号の内容を確認できる">＜目星＞</button>
+                <div id="output14"></div>
+                </p>
+
+                <p>
+                    <br>本棚の本の並びに何か規則性はないだろうか <span class="important-span">【HO：解き明かすもの】のみ成功したらクリック可能</span><br>
+                    <button class="choice-btn" data-output="output15" data-text="
+【書斎―書籍情報】（目星成功情報） <br>
+あなたは以下の情報があることが分かった。 <br>
+ <br>
+１ー名前辞典 <br>
+２ー花言葉辞典 <br>
+６－暗号解読の本 <br>
+ <br>
+成功情報1回分を１ｄ８の結果ではなく好きな番号の内容を確認できる
+">＜目星＞
+                    </button>
+                <div id="output15"></div><br>
+                <span class="important-span">本ファイルでは、１ｄ８の結果の数字が末尾にあるものをクリック</span><br>
+                <p>
+                    <button class="choice-btn" data-output="output2"
+                        data-text="【書斎―図書館成功①】<br>苗字や名前が載っている<br>８番目の招待客がいるとしたら、なにかヒントになるかもしれない<br><br>一部抜粋<br>四十八願　―よいなら<br>八月朔日　―ほずみ<br>八日刃　　―ようかば<br>八重嶌　　―やえしま<br>八雲　　　―やくも<br>新八　　　―しんぱち<br>蜂屋　　　―はちや<br>瑛人　　　―えいと<br>夜野　　　―やの<br><br><br>考えたらきりがないようだ">【書斎―図書館成功１】</button>
+                </p>
+                <p>
+                    <button class="choice-btn" data-output="output3"
+                        data-text="【書斎―図書館成功②】<br><br>②花言葉集<br>花言葉が記載されている。<br><br>一部抜粋<br>ガーベラ　　―希望・常に前進<br>ハナズオウ　―裏切り<br>ルドベキア　―正義・公平<br>ポピー　　　―慰め・感謝<br>アルメリア　―共感<br>ムスカリ　　―失望<br>ハルジオン　―追憶の愛<br>ロゼリア　　―悪意">【書斎―図書館成功２】</button>
+                </p>
+                <p>
+                    <button class="choice-btn" data-output="output4"
+                        data-text="【書斎―図書館成功③】<br>事件スクラップ３<br><br>1年前に起きた強盗傷害事件記事<br><br>内容の要約<br>①犯人の名前は八瀬　栄斗（はせ　えいと）。23歳。<br>②過去少年院に入っていた。再犯であり現在逃走中。<br>③被害者は精神的ショックから喋れなくなってしまったらしい。"">【書斎―図書館成功３】</button>
+                </p>
+                <p>
+                    <button class=" choice-btn" data-output="output5"
+                        data-text="【書斎―図書館成功④】<br>事件スクラップ２<br><br>5年前に起きた事件の記事のようだ。<br><br>内容の要約<br>①被害者は5名。全員瞳がくり抜かれていた<br>②3人目から死者がでており、警察は連続殺人事件として捜査したが未解決<br>③眼窩上縁など目の周りの骨に、特殊な傷跡がある">【書斎―図書館成功４】</button>
+                </p>
+                <p>
+                    <button class="choice-btn" data-output="output6"
+                        data-text="【書斎―図書館成功⑤】<br>事件のスクラップ１<br><br>10年前に起きた集団自殺のオカルト記事がある。<br><br>内容の要約<br>①10年前、集団自殺の発端は宗教団体<br>②死は救済である。すべての生命には必ず終わりがありそれこそが平等の安寧とその団体では考えられていた<br>③その事件では一人生き残った少年がおり、そのものは神の使者として生まれた時から崇められていた。<br>④生き残った少年は未成年であることから名前は伏せられている。<br>⑤記者はその少年をまさしく神の使者であったと記している。">【書斎―図書館成功５】</button>
+                </p>
+                <p>
+                    <button class="choice-btn" data-output="output7"
+                        data-text="【書斎―図書館成功⑥】<br>昔ながらの暗号ロジック<br><br>①アナグラム　→言葉の入れ替え<br>※あきとかせ→ときあかせ<br><br>②シーザー暗号→言葉のずらし（あいうえお表の1段上の文字を読む等）<br>※例：なくいきそ→ときあかせ<br><br>③上杉暗号→7×７マスにいろは歌を順番に">【書斎―図書館成功６】</button>
+                </p>
+                <p>
+                    <button class="choice-btn" data-output="output8"
+                        data-text="【書斎―図書館成功⑦】<br>オカルト雑誌の切り抜きを見つける。<br>「これほどまでの残酷な優しさは見たことがあるだろうか」<br><br>記事の抜粋<br>町田舎にて、世にも恐ろしい事件が発生しました。<br>ワラキア・ブラムによる集団食人事件です。ブラム氏は、その町では古くから続く資産家で彼は難病を患っていました。供述から、健康な肉体を食せば、身体が良くなると聞いた。試す価値はあると思った。と話しているとのこと。<br>また、彼は自分の愛する町民や使用人、家族の食事にも人間の一部を使用した料理を提供していたようです。彼の善意から長く健やかに生きるようにと。<br><br>町民にも家族にも愛された彼でしたが、何がきっかけだったのか、真相は明らかになっていません。">【書斎―図書館成功７】</button>
+                </p>
+                <p>
+                    <button class="choice-btn" data-output="output9"
+                        data-text="【書斎―図書館成功⑧】<br><br>オカルト雑誌を見つける。<br>「死神探偵見事に容疑者死亡で難事件を解決！？」<br><br>記事の抜粋<br>某日起きた女児誘拐殺人事件ですが、詩志麻探偵が関わった結果容疑者死亡となりました。容疑者死亡後、事件が起きなくなったことから巷では容疑者死亡による事件が解決されたと話題になっております。<br>詩志麻探偵は「僕としては、犯人にきちんと罪を償ってほしかったのですが、残念でなりません」とのこと。<br>容疑者の死亡状況詳細は伏せられておりますが、関係者から極秘に入手した情報によりますと容疑者は女児誘拐殺人事件の殺害手口を真似た方法で殺害されているようです。これは被害者による怨念なのか！">【書斎―図書館成功８】</button>
+                </p>
+
+                <div id="output2"></div><br>
+                <div id="output3"></div><br>
+                <div id="output4"></div><br>
+                <div id="output5"></div><br>
+                <div id="output6"></div><br>
+                <div id="output7"></div><br>
+                <div id="output8"></div><br>
+                <div id="output9"></div><br>
+
+                <script src="../js/script.js"></script>
+
+                <br>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

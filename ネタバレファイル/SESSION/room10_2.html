@@ -1,0 +1,176 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <div class="bor2">
+                <script>
+                    function updateHeight() {
+                        const height = document.body.scrollHeight;
+                        parent.postMessage({ iframeHeight: height }, "*");
+                    }
+
+                    window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                    // すべての展開ボタンにイベントをつける
+                    document.querySelectorAll(".expand-btn").forEach(btn => {
+                        btn.addEventListener("click", function () {
+                            const target = this.nextElementSibling;
+                            target.style.display = "block";
+
+                            // 高さを再通知
+                            updateHeight();
+                        });
+                    });
+                </script>
+
+                【隠し通路】 <br>
+                あなたたちは隠し通路がある場所へ向かった。<br>
+                <br>
+                どうやら、この館は館内図の外側に一回り通路がある。<br>
+                窓はないが電球が付いており、問題なく歩くことはできる。位置関係からして「8の部屋」「6の部屋」「キッチン」にはこの隠し通路に続く扉がありそうだ。他の客室に関しては、床に小さな扉があり子供であれば入れそうだ。
+                <br>
+                ※PLへ<br>
+                「スクリーンパネルD」を表示にしてください。<br>
+                <br> <br>
+                スクリーンパネルD <br>
+                <img src="../img/BG/map2.jpeg" alt="map2" width="100%" style="display: block; margin: auto;">
+                <p>
+                   <span class="important-span">【HO：支え繋ぐもの】0325日にここに来て目星を成功していた場合のみクリック</span><br>
+                    <button class="choice-btn" data-output="output1" data-text="
+【隠し廊下】（自動取得）<br>
+以前来た時はナイフだけであったが、他が増えている。
+">＜自動取得＞
+                    </button>
+                <div id="output1"></div>
+                </p>
+                <p>
+                    <br>【隠し廊下】 <span class="important-span">【HO：解き明かすもの】のみクリック可能</span><br>
+                    <button class="choice-btn" data-output="output5" data-text="
+【隠し廊下】（自動取得）<br>
+ここにきてわかる。館に閉じ込められた理由の１つがこれだ。また、窓がなかったのもわかる。
+館に閉じ込めなければ、この仕掛けは意味をなさない。自由に外と行き来できるのであれば、外壁と内壁を測れば、この隠し通路の存在に気づくだろう。また、もしかしたら、外から見た場合に違和感を覚えるかもしれない。
+">＜自動取得＞
+                    </button>
+                <div id="output5"></div>
+                </p>
+                <p>
+                    <br>【隠し廊下】 <span class="important-span">成功したらクリック</span><br>
+                    <button class="choice-btn" data-output="output6" data-text="
+【隠し廊下】（目星成功）<br>
+隠し通路の端に、服と骨の一部や布でくるまれたナイフを見つける。服にはVBSのタグがある。
+">＜目星＞
+                    </button>
+                <div id="output6"></div>
+                </p><br>
+
+
+            </div>
+            <br>
+            <p>
+                <img src="../img/BG/BG_廊下２.jpeg" width="60%"
+                    style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+            </p>
+            <div class="bor2">
+                【隠し部屋】<br>
+                さらに驚いたことに、３階への階段、そして扉を見つける。アルメリアの花が彫刻された扉だ。特殊な鍵が必要なようだ。扉の近くには、封筒が２つ置かれている。<br>
+                ※隠し通路について <span class="important-span">他の招待客に開示する場合、1探索時間がかかります。<br>
+                    探索個所選択時に、【会話アイコン】を選択</span>してください。
+
+                <p>
+                    <br>【空色の封筒２】 <span class="important-span">詳しく見る</span><br>
+                    <button class="choice-btn" data-output="output3" data-text="
+【３階扉―空色の封筒２】（自動取得）<br>
+空色の封筒が落ちており、宛先は「最後の客人」となっている。<br>
+<br>
+中を開けば、以下の内容が記載されていた。<br>
+<br>
+この扉の鍵はハナズオウが持っている。ハナズオウの事件を解き明かしたときに、渡されることだろう。<br>
+<br>
+">＜自動取得＞
+                    </button>
+                <div id="output3"></div>
+                </p>
+                <p>
+                    <br>【空色の封筒３】 <span class="important-span">詳しく見る</span><br>
+                    <button class="choice-btn" data-output="output7" data-text="
+【３階扉―空色の封筒３】（自動取得）<br>
+空色の封筒が落ちており、宛先は「最後の客人」となっている。<br>
+<br>
+中を開けば、以下の内容が記載されていた。<br>
+<br>
+いくつか記事やブログの切り抜きとそれぞれの切り抜きにクリックで写真が止められている。いずれも20代～30代くらいの男性の事故死や行方不明について記載されているようだ。<br>
+驚くべきことに、どの写真にも三田と親し気に写る男性の姿があった。
+<br>
+
+">＜自動取得＞
+                    </button>
+                <div id="output7"></div>
+                </p>
+                <p>
+                    <br>【３階扉】 <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+                    <button class="choice-btn" data-output="output8" data-text="
+【３階扉】<br>
+アルメリアの花だ。この扉こそ、「空色の封筒」に記載されていた「アルメリアの花の目印」ではないだろうか。
+
+">＜アイデア＞＋２０＞
+                    </button>
+                <div id="output8"></div>
+                </p>
+                </p>
+                <br>
+                <script>
+                    function updateHeight() {
+                        const height = document.body.scrollHeight;
+                        parent.postMessage({ iframeHeight: height }, "*");
+                    }
+
+                    function showSpoiler(id) {
+                        const box = document.getElementById(id);
+                        box.style.display = "block";
+
+                        const img = box.querySelector("img");
+                        if (img && !img.complete) {
+                            img.onload = () => setTimeout(updateHeight, 50);
+                        } else {
+                            setTimeout(updateHeight, 50);
+                        }
+                    }
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                        setTimeout(updateHeight, 50);
+                    });
+                </script>
+
+
+                <br>
+
+
+            </div>
+        </div>
+        <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

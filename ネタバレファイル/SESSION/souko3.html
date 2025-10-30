@@ -1,0 +1,531 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+            <div class="bor2">
+
+                入るとひんやりとする。ものはあまり置かれていない。鞄が置かれていることから、亡くなった3人の荷物もあるようだ。
+                棚の横には洗濯機と乾燥機がありここで洗濯をしていることがわかる。
+                <br>
+                奥には扉を隠すようにカーテンでくくられた空間がある。きっとこの先に遺体があるのだろう。<br>
+
+                ※ここでは、調査が５回できる。（同じ調査対象者を複数回選ぶことも可能）<br>
+                <br>
+                ①遺体　<br>
+                　　→遺体1体につき、調査回数1回分<br>
+                <br>
+                ②棚と故人の手荷物の確認　<br>
+                　　→手荷物1人分につき、調査回数1回分<br>
+                　　→棚（手荷物除く）確認、調査回数1回分<br>
+                <br>
+                遺体を確認する場合<br>
+                <a href="#sitai">【扉のアイコン】</a>をクリック<br>
+                <br>
+                棚の内容を確認する場合<br>
+                <a href="#tana">【探索のアイコン】</a>をクリック<br>
+                <br>
+
+                調査回数に注意して調査を実施してください<br>
+            </div>
+            <br>
+
+            <p>
+                <img src="../img/BG/BG_倉庫.jpeg" width="60%"
+                    style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+
+            <div class="bor2" id="sitai">
+                <br>
+                <h4>遺体を確認する</h4>
+                そこにあったのは、横たわる４つの遺体だ。<br>
+                それぞれ布で覆われている。<br>
+                <br>
+                １度の探索時間では、５回調査が可能です。<br>
+                （同じ調査対象を選び技能ロールを再度ふることも可能、その場合は、調査回数を＋１してください）<br>
+                ※荷物についても調査回数は合算されますのでご注意ください。<br>
+                <br>
+                遺体1体につき、調査回数1回分<br>
+                <br>
+                もしも途中で荷物を調べに行く場合<br>
+                <a href="#tana">【荷物】</a>をクリック<br>
+                <br>
+
+
+                <details>
+                    <summary>市川遺体</summary>
+                    あなたたちは、市川睦月の遺体を見ることにした。<br>
+                    <br>
+                    布を取ると、あなたたちはその遺体の状況に驚くことだろう。首が折れネジ曲がり前後が逆になっている。さらに驚いたことに、彼の遺体には他の外傷が見当たらない。遺体を見ると市川は背が高い男性だ。体型も標準的で何かの身体的障害も見当たらないため抵抗するには十分に力があったはずだ。首を反対にするほどのことは人間の力で可能なのだろうか。何か道具を使ったのか。<br>
+                    <br>
+                    ＜正気度ロール　1/1d4＞<br>
+                    <br>
+                    探索可能箇所には【探索のアイコン】がある。<br>
+                    <br>
+                    市川睦月 30代前半　背が高く中肉中背<br>
+                    日焼けなどはしていないことから内勤の仕事をしているようだ。<br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊市川の首＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output101" data-text="
+【市川の首】（目星成功）<br>
+市川の首をよく見た。なにかの道具で押さえつけたような跡は見当たらない。">＜目星＞</button>
+                    <div id="output101"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊市川の爪＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output102" data-text="
+【市川の爪】（自動取得）<br>
+彼の爪の間には、抵抗したかのような皮膚組織のようなものがある。彼の身体には外傷がないことから、犯人に傷があるのでは？">＜自動取得＞</button>
+                    <div id="output102"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊市川の服＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output103" data-text="
+【市川の服】（自動取得）<br>
+来ていたジャケットの内側に財布と空色の便箋を見つける。<br>
+<br>
+【財布】<br>
+→身分証明書が入っている。どこかの研究所の職員らしい。<br>
+「Valusia Institute of Biological Sciences　：MUTUKI　ICHIKAWA」<br>
+<br>
+【空色の便箋】<br>
+以下の内容が記載されていた<br>
+―――<br>
+君が償いたいと思うなら来るといいだろう。<br>
+君が作り出した化け物も館に招待している。<br>
+<br>
+君が処分したいと思っているなら来るといいだろう。<br>
+君たちから逃げ出した化け物が館へと足を忍ばせるだろうから<br>
+<br>
+<br>
+君が決着をつけたいと思っているなら来るといいだろう。<br>
+君たちが作った化け物も決着をつけたいと思っているのだから。<br>
+―――">＜自動取得＞</button>
+                    <div id="output103"></div>
+                    </p>
+
+                </details>
+
+                <details>
+                    <summary>二戸遺体</summary>
+                    あなたたちは、二戸仁の遺体を見ることにした。<br>
+                    <br>
+                    布を取ると、あなたたちはその遺体の状況に驚くことだろう。目玉が何かでえぐられている。身体には無数の刃物による傷が見られる。死因は出血死、またはショック死かもしれない。夥しい血が流れたのだろう。顔周りや服に血が至る所にこびりついている。<br>
+                    <br>
+                    ＜正気度ロール　1/1d4＞<br>
+                    <br>
+                    探索可能箇所には【探索のアイコン】がある。<br>
+                    <br>
+                    二戸仁 20代前半のように見えるが遺体の状況により不明。<br>
+                    <br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊体の傷＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output201" data-text="
+【二戸の身体の傷】（医学、アイデア 1/2）<br>
+彼には刃物によってできたと思われる傷が複数あるが、防御創のようなものはない。一方的に傷つけられたようだ。しかし、出血の痕跡を見るに生きているうちに傷つけられたようだが、なぜ抵抗しなかったのだろうか">＜医学、アイデア
+                            1/2＞</button>
+                    <div id="output201"></div>
+                    </p>
+
+
+
+                    <p>
+                        <br> 【探索のアイコン】＊二戸の服＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output203" data-text="
+【二戸の服】（自動取得）<br>
+来ていたジャケットの内側に財布と空色の便箋を見つける。<br>
+<br>
+【財布】<br>
+→学生証が入っている。医学部の学生のようだ。<br>
+<br>
+【空色の便箋】<br>
+以下の内容が記載されていた<br>
+―――<br>
+君に最高の贈り物を授けよう。<br>
+<br>
+それは輝く２つの宝石。<br>
+<br>
+君のコレクションに加えるのにふさわしいだろう。<br>
+<br>
+ただし油断してはいけない。<br>
+<br>
+君もまた獲物の一人なのだから。<br>
+―――">＜自動取得＞</button>
+
+                    <div id="output203"></div>
+                    <p>
+                        <br> 遺体をみて思うことがある <span class="important-span">【HO：解き明かすもの】のみクリック可能</span><br>
+                        <button class="choice-btn" data-output="output202"
+                            data-text="
+【二戸―関連事件】（自動取得）
+眼球が抉り取られていることからある事件を思い出す。世間を賑わす眼球コレクターだ。10代後半から20代半ばの女性がターゲットで、犯人はまだ捕まっていない。手口が似ている・・・だが、被害者となるターゲット層とは異なる。">＜自動取得＞</button>
+                    <div id="output202"></div>
+                    </p>
+
+                    <p>
+                        <br> 遺体をみて思うことがある <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+                        <button class="choice-btn" data-output="output204" data-text="
+【二戸の遺体】（アイデア 成功）
+ここまでの出血があれば、犯行現場も同じく血痕が残っているだろう。二戸は「２の部屋」で発見されたと聞いたが、その部屋は現在双葉が使用しているはず。双葉は血まみれとなった部屋で生活をしていて問題ないのだろうか。
+また、双葉はいつこの館に？">＜アイデア＞</button>
+                    <div id="output204"></div>
+                    </p>
+
+                    </p>
+                </details>
+                <details>
+                    <summary>生三遺体</summary>
+
+                    あなたたちは、生三宮の遺体を見ることにした。<br>
+
+                    布を取ると、30代前半の優しそうな男性がいた。遺体の状況から何かしらのアレルギー反応を起こしたのではと推測ができる。<br>
+                    <br>
+                    ＜正気度ロール　1/1d2＞<br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊生三の遺体＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output301" data-text="
+【生三の遺体】（自動取得）
+身体には特に怪しい傷がない。">＜自動取得＞</button>
+                    <div id="output301"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊生三の服＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output302" data-text="
+【生三の服】（自動取得）
+特になにか気になるものは所持していない。">＜自動取得＞</button>
+                    <div id="output302"></div>
+                    </p>
+
+                </details>
+                <details>
+                    <summary>詩志麻遺体</summary>
+                    あなたたちは、詩志麻司馬の遺体を見ることにした。<br>
+
+                    布を取ると、昨日まで元気そうに講釈を垂れていた詩志麻がいた。遺体の状況から首を吊ったと推測ができる。<br>
+                    <br>
+                    ＜正気度ロール　1/1d4＞<br>
+                    <br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊詩志麻の首＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output401" data-text="
+【詩志麻の首】（医学、目星 1/2成功）<br>
+縄の痕が首に残っている。首を吊ったことにより、身体の重みで舌骨が折れて死んだようだ。また、吊るされた縄以外の痕はなく、形状から絞め殺された後、吊るされた可能性は低い。">＜医学、目星 1/2＞</button>
+                    <div id="output401"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊詩志麻の服＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output402" data-text="
+【詩志麻の服】（自動取得）<br>
+服の中を探ってみると、「４の部屋」とプレートがついた鍵がある。">＜自動取得＞</button>
+                    <div id="output402"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊詩志麻の身体＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output403" data-text="
+【倉庫―詩志麻の遺体（全体）】（自動取得）<br>
+手のひらに数日前と思われる傷があるが、死亡推定時刻に争った形跡はない。爪などを見てもきれいだ。">＜自動取得＞</button>
+                    <div id="output403"></div>
+                    </p>
+                </details>
+
+                <details>
+                    <summary>三田遺体</summary>
+                    あなたたちは、三田満美の遺体を見ることにした。<br>
+
+                    布を取ると、そこには苦し気に濁った目を見開く三田の姿があった。<br>
+
+                    <br>
+                    ＜正気度ロール　1/1d4＞<br>
+                    <br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊三田の身体＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output501" data-text="
+【三田の身体】（目星成功）<br>
+歯の隙間には糸くずが挟まっていることに気が付く。また、両腕になにかの細長いものを押し当てた跡が残っている。">＜目星＞</button>
+                    <div id="output501"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊三田の服＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output502" data-text="
+【三田の服】（自動取得）<br>
+服の中を探ってみると、「３の部屋」とプレートがついた鍵と便箋がある。<br>
+<br>
+【空色の便箋】<br>
+すべて点字で記載されており、読むことができない。<br>
+<br>
+＜芸術（点字）＞ <br>
+成功した場合は、【成功アイコン】をクリック">＜自動取得＞</button>
+                    <div id="output502"></div>
+                    </p>
+
+                    <p>
+                        <br> 【成功アイコン】 <span class="important-span">指示があった場合のみクリック</span><br>
+                        <button class="choice-btn" data-output="output503" data-text="
+【三田の服】（芸術（点字））<br>
+<br>
+【空色の便箋】<br>
+以下の内容が記載されていた<br>
+―――<br>
+<br>
+君の気持ちがわかるとは言わないが<br>
+君の気持ちを汲んで場所を与えよう<br>
+<br>
+もうそろそろ君の中の感情が<br>
+溢れてしまうだろうから<br>
+<br>
+君への贈り物は口に含んでみたらいいだろう。<br>
+噛みしめれば分かる。それが毒になることを。<br>">【成功アイコン】</button>
+                    <div id="output503"></div>
+                    </p>
+                </details>
+         
+
+                <details>
+                    <summary>御膳遺体</summary>
+                    あなたたちは、御膳檎檎の遺体を見ることにした。<br>
+
+                    布を取ると、穏やかに眠る御膳がいた。まるで死んでいないようにも見える。<br>
+
+                    <br>
+                    ＜正気度ロール　1/1d4＞<br>
+                    <br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊御膳の顔＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output501" data-text="
+【御膳の顔】（医学・知識成功）<br>
+穏やかに眠るような顔をしている。他の遺体に比べてやけに冷たくも感じる。<br>
+遺体の状況から、もしかしたら二酸化炭素中毒で死んだのではないかと思いつく。">＜医学／知識＞</button>
+                    <div id="output501"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊御膳の服＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output502" data-text="
+【御膳の服】（自動取得） <br>
+服の中を探ってみると、「５の部屋」とプレートがついた鍵と便箋がある。 <br>
+ <br>
+【空色の便箋】 <br>
+以下の内容が記載されていた <br>
+――― <br>
+予定通りの開催を行う。 <br>
+ <br>
+予定通りの日程で行う。 <br>
+ <br>
+予定通りの規則で行う。 <br>
+ <br>
+予定通りの用意をする。 <br>
+ <br>
+君が君であるために。">＜自動取得＞</button>
+                    <div id="output502"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊写真＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output503" data-text="
+【御膳の写真】（自動取得） <br> 
+定期券入れのようなものに、写真が入っているのを見つける。 <br> 
+今よりも幼い御膳が笑顔で中央におり、囲むように同じ服を着た大人が数十人いる。まるで学校の集合写真のようだが、子供は御膳しかいない。 <br> 
+異様な雰囲気がある。">＜自動取得＞</button>
+                    <div id="output503"></div>
+                    </p>
+                </details>
+
+                <p>
+                    <img src="../img/BG/BG_死体２.jpeg" width="60%"
+                        style="display: block; margin-left: auto; margin-right: auto;"><br>
+                </p>
+            </div><br>
+
+            <div class="bor2" id="tana">
+                <br>
+                <h4>荷物を確認する</h4>
+                棚にはいくつか日用品の予備などがある。<br>
+                <br>
+                １度の探索時間では、５回調査が可能です。<br>
+                （同じ調査対象を選び技能ロールを再度ふることも可能、その場合は、調査回数を＋１してください）<br>
+                ※遺体についても調査回数は合算されますのでご注意ください。<br>
+                <br>
+                棚と故人の手荷物の確認<br>
+                　　※手荷物1人分につき、調査回数1回分<br>
+                　　※棚（手荷物除く）確認、調査回数1回分<br>
+                <br>
+                <br> 【棚の中】(日用品の予備などが入っているが特に気になるものはない。)
+                <span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output1001-1" data-text="
+【棚の中】（目星成功）<br>
+隅にゴミ袋があり、どうやら割れた食器等の不燃物が置かれている。中をみれば柄が折れたフォークやスプーンが数本ある。「７」の数字が刻印されているものが多いが1本だけ「２」のスプーンがある。">＜自動取得＞</button>
+                <div id="output1001-1"></div>
+                <br> 倉庫を見渡す気づく <span class="important-span">【HO：支え繋ぐもの】のみクリック可能</span><br>
+                <button class="choice-btn" data-output="output1002-1" data-text="
+【倉庫―荷物】（自動取得）<br>
+詩志麻の荷物はここに置かれていない。まだ部屋にあるのだろう。">＜自動取得＞</button>
+                <div id="output1002-1"></div>
+                <br>
+                もしも途中で遺体を調べに行く場合<br>
+                <a href="#sitai">【遺体】</a>をクリック<br>
+                <br>
+                <details>
+                    <summary>市川の荷物</summary>
+                    九重の文字だろうか。市川と書かれたメモとともに鞄が置かれている。中身は最低限のものしかなく、ビジネスの出張のような印象を受ける。<br>
+                    <br>
+                    探索可能箇所には【探索のアイコン】がある。<br>
+                    <br>
+                    <p>
+                        <br> 【探索のアイコン】＊市川の荷物①＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output101-1" data-text="
+                        【市川の荷物①】（目星成功）<br>
+書類の中に手紙の内容を考えていたような文章を見つける。実際書かれた手紙のようなものは見当たらない。<br>
+<br>
+一部抜粋―――<br>
+君達には理想を押し付けてすまなかった。<br>
+償いがしたい。君達が本当の人間になれるように努力する。望むなら君達への更なる能力向上も手助けしよう。<br>
+<br>
+―――<br>
+">＜目星＞</button>
+                    <div id="output101-1"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊市川の荷物②＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output102-1" data-text="
+【市川の荷物②】（自動取得）<br>
+市川の荷物には小さな木箱が入っており、中を見ると薬の瓶のようだ。青紫色のどろどろとした液体だ。<br>
+<br>
+※開ける場合、酷い腐敗臭がすることが分かる。＜薬学＞に成功した場合もこの薬が何かわからない。">＜自動取得＞</button>
+                    <div id="output102-1"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊市川の荷物③＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output103-1" data-text="
+【市川の荷物③】（図書館取得）<br>
+どうやらこの手帳はなにかの研究内容のメモらしい。一部だが、内容について分かった<br>
+<br>
+一部要約<br>
+・逃げた個体はV0020<br>
+・外見不明（研究データ破壊のため）<br>
+・身体的特徴　他個体と同様<br>
+・約3か月前に逃げた">＜図書館＞</button>
+                    <div id="output103-1"></div>
+                    </p>
+
+                </details>
+
+                <details>
+                    <summary>二戸の荷物</summary>
+                    九重の文字だろうか。二戸と書かれたメモとともに鞄が置かれている。中身は学生らしい荷物だが一部気になるものがある。<br>
+                    <br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊二戸の荷物①＊ <span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output201-1"
+                            data-text="
+【二戸の荷物①】（医学、知識1/2、精神分析1/2成功） <br>
+読みにくいが「flunitrazepam」と書かれているようだ。 <br>
+フルニトラゼパムは睡眠導入剤の一種だが、依存性や拒絶反応も高く日本の精神科治療薬のうち致死性の高い薬でもあることを思い出す。また、デートレイプドラッグとしての悪用の例もあり、海外での規制も厳しい薬品だとわかる。">＜医学、知識1/2、精神分析1/2＞</button>
+                    <div id="output201-1"></div>
+                    </p>
+                    <p>
+                        <br> 【探索のアイコン】＊二戸の荷物②＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output203-1" data-text="
+【二戸の荷物②】 <br>
+5冊の手帳。それぞれ恋人との楽しい思い出を記載したようだ。5冊とも異なる呼び名（あだな）が記載されている。">＜自動取得＞</button>
+
+                    <div id="output203-1"></div>
+
+                    </p>
+                </details>
+                <details>
+                    <summary>生三の荷物</summary>
+
+                    あなたたちは、生三宮の遺体を見ることにした。<br>
+
+                    布を取ると、30代前半の優しそうな男性がいた。遺体の状況から何かしらのアレルギー反応を起こしたのではと推測ができる。<br>
+                    <br>
+                    ＜正気度ロール　1/1d2＞<br>
+
+                    <p>
+                        <br> 【探索のアイコン】＊生三の荷物①＊ （エピペン）<span class="important-span">成功したらクリック</span><br>
+                        <button class="choice-btn" data-output="output301-1" data-text="
+【生三の荷物①】<br>
+（医学、知識、応急手当、アイデア成功）<br>
+<br>
+エピペン（アドレナリン自己注射薬）でアナフィラキシーショックの応急処置薬として用いられていることを思い出す。">＜医学、知識、応急手当、アイデア＞</button>
+                    <div id="output301-1"></div>
+                    </p>
+
+                    <p>
+                        <br> 【探索のアイコン】＊生三の荷物②＊ <span class="important-span">詳しく見る</span><br>
+                        <button class="choice-btn" data-output="output302-1" data-text="
+【生三の荷物②】（自動取得）<br>
+予定やその日の出来事が簡潔に書かれている。<br>
+三田の目が不自由なこともあり、見られる心配がないからだろうか。三田の可愛さやその日の素敵だったことを恥ずかしげもなくたくさん書いてある。">＜自動取得＞</button>
+                    <div id="output302-1"></div>
+                    </p>
+
+                </details>
+
+                <br>
+                <p>
+                    <img src="../img/BG/BG_倉庫_棚.jpeg" width="60%"
+                        style="display: block; margin-left: auto; margin-right: auto;"><br>
+                </p>
+
+            </div>
+        </div>
+        <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

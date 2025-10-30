@@ -1,0 +1,115 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+
+            【玄関ホール】 <br>
+
+            2階へ続く階段がある。吹き抜けとなっている。 <br>
+            <br>
+            探索可能箇所には【探索のアイコン】がある。 <br>
+            <br>
+            改めて、玄関の扉を調べているが開きそうにない。 <br>
+            なにかの金属でできているのだろう。破壊も難しい。 <br>
+            真相を解き明かすしかないのだろうか <br>
+            <br>
+            <p>
+                <br> 【探索のアイコン】＊階段＊（自動取得） <span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output1" data-text="
+【玄関ホール】（自動取得）<br>
+階段を昇り降りすると、吹き抜けのせいかホールにいれば靴跡の音が少し響く。しかし、廊下側からは扉を閉めるとあまり聞こえない。どうやら、この建物は音が聞こえにくいように作られているようだ。">＜自動取得＞</button>
+            <div id="output1"></div>
+            </p>
+
+            <p>
+                <br>【探索のアイコン】＊全体＊ <span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output2" data-text="
+【玄関ホール】（目星成功）<br>
+壁に一部凹凸がある。同系色でわかりにくいが、確かに指を滑らせると細い線とマークがえがかれているようだ。
+
+確認すれば、この館中の壁に動線のような凹凸があることが分かった。">＜目星＞</button>
+            <div id="output2"></div>
+            </p>
+
+            <p>
+                <br> 辺りを見渡した <span class="important-span">【HO：解き明かすもの】のみクリック可能</span><br>
+                <button class="choice-btn" data-output="output3" data-text="
+【玄関ホール】（自動取得）<br>
+来た時の悪天候が幸いしてか２つの扉の間に自分たちの靴跡のみがくっきり残り、こすれた様子もないことから自分たちが訪れてから新しく訪れたものがいないことが分かる。">＜自動取得＞</button>
+            <div id="output3"></div>
+            </p>
+
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                function showSpoiler(id) {
+                    const box = document.getElementById(id);
+                    box.style.display = "block";
+
+                    const img = box.querySelector("img");
+                    if (img && !img.complete) {
+                        img.onload = () => setTimeout(updateHeight, 50);
+                    } else {
+                        setTimeout(updateHeight, 50);
+                    }
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(updateHeight, 50);
+                });
+            </script>
+
+
+            <br>
+
+
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

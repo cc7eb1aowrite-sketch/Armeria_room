@@ -1,0 +1,152 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+
+            【８の部屋】 <br>
+            中に入れば部屋は歪な形だが、ビジネスホテルのような印象を受ける。また、額が飾られている。<br>
+
+
+            <p>
+                <br>【探索のアイコン】＊８の部屋の窓＊ <span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output5" data-text="
+【８の部屋―窓】（自動取得）<br>
+窓のカーテンを開けてみる。すると現れたのは壁だ。ただカーテンレールがあり、カーテンがかけられているだけの窓枠だった。
+">＜自動取得＞
+                </button>
+            <div id="output5"></div>
+            </p>
+
+            <p>
+                <br>【探索のアイコン】＊部屋全体＊ <span class="important-span">【HO：支え繋ぐもの】のみクリック可能</span><br>
+                <button class="choice-btn" data-output="output3" data-text="
+【８の部屋―全体】（自動取得）<br>
+使った形跡はない。もしも、本当に8の招待客がいるのであればこの部屋は使っていないのだろう。ではどこに？
+">＜自動取得＞
+                </button>
+            <div id="output3"></div>
+            </p>
+
+            <br>【探索のアイコン】＊クローゼット＊ <span class="important-span">成功したらクリック</span><br>
+
+            <button onclick="showSpoiler('spoilerBox1')" class="choice-btn">＜目星1/2＞</button>
+            <div id="spoilerBox1" style="display:none; margin-top:10px;">
+                <div style="max-height: none; overflow-y: visible;">
+
+                    <p> 【秘密のクローゼット】<br>
+                        あなたたちは好奇心によるものか、はたまた必要にかられてかクローゼットをよく見てみる。<br>
+                        クローゼットの背面の一部が壁側に押せる（スライドできる）のだ。それは取手がなく普通に使っていれば気が付かないものだろう。
+
+                        スライドさせれば、そこから壁側へ通じることができそうだ。ここからであれば、大人でも出入りできる。<br>
+                        <br>
+                        PLへ<br>
+                        スクリーンパネル一覧から【スクリーンパネルF】と【青の扉】を表示させてください。<br>
+                        <span class="important-span">本ファイルではすでに【スクリーンパネルF】の非公開にした画像が表示されています。</span><br><br>
+                        【青の扉】＊＊＊要約<br>
+                        <span class="important-span">この扉はどの探索者でも通ることが可能</span><br>
+                        ＊入り方＊<br>
+                        ・見つけた場所に「再び訪れる」<br>
+                        <span class="important-span">※クローゼット目星成功した次の探索時間以降に入れる　<br>
+                            ※見つけた探索時間内は、時間が足りないものとして調べることができない。</span><br>
+                        ・館内地図の上にある【青の扉】をクリック<br>
+                        ・再び訪れた際に他の招待客がいた場合は行くことができない<br>
+
+                </div>
+                <img src="../img/BG/パネル１.jpeg" alt="パネルF" width="60%" style="display: block; margin: auto;">
+            </div><br>
+
+            <p>
+                <br>壁の額に目を向けた <span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output4" data-text="
+ 【壁の額】＊8の部屋＊<br>
+                        額縁の装飾に違和感を覚えた。<br>
+                        額の装飾の一部を押し込む、すると何も書かれていなかった額に文字が現れた。<br>
+                        <br>
+                        ルドベキアの館　ルール<br>
+                        ・ルールを破れば報酬は貰えない<br>
+                        ・使用人は仕事する限り対象には選んではいけない<br>
+                        ・3通目で送付した招待状は肌見放さず持っていること<br>
+                        ・ルールを口外してはいけない<br>
+                        ・探偵役は最後の客人たちにやらせること<br>
+                        ・８の部屋の招待客が犯人であると聞いたことにすること<br>
+                        ・正面扉が開くまで館の中にいること<br>
+">＜目星＞
+                </button>
+            <div id="output4"></div>
+            </p>
+
+
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                function showSpoiler(id) {
+                    const box = document.getElementById(id);
+                    box.style.display = "block";
+
+                    const img = box.querySelector("img");
+                    if (img && !img.complete) {
+                        img.onload = () => setTimeout(updateHeight, 50);
+                    } else {
+                        setTimeout(updateHeight, 50);
+                    }
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(updateHeight, 50);
+                });
+            </script>
+
+
+            <br>
+
+
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

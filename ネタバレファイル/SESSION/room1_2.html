@@ -1,0 +1,175 @@
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style_common.css">
+    <link rel="stylesheet" href="../css/style_noside.css">
+    <link rel="stylesheet" href="../css/style_content.css">
+
+
+</head>
+
+<!--/sub-->
+<!--C+S+H htmlプレビュー-->
+<!--/メインー-->
+
+<body class="no-sidebar">
+
+    <div id="container">
+        <div id="main">
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                window.addEventListener("load", updateHeight); // 初回読み込み時
+
+                // すべての展開ボタンにイベントをつける
+                document.querySelectorAll(".expand-btn").forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        const target = this.nextElementSibling;
+                        target.style.display = "block";
+
+                        // 高さを再通知
+                        updateHeight();
+                    });
+                });
+            </script>
+
+            【１の部屋】 <br>
+            中に入れば部屋は歪な形だが、ビジネスホテルのような印象を受ける。また、額が飾られている。<br>
+            <p>
+                <br> 【探索のアイコン】＊１の部屋の荷物＊/ <span class="important-span">成功したらクリック</span><br>
+                <button class="choice-btn" data-output="output14" data-text="
+【１の部屋―一ノ瀬の荷物】（目星成功）<br>
+<br>
+空色の封筒を見つける。<br>
+なにやら、オカルトを彷彿させる呪文のようなものが記載されている。<br>
+<br>
+―――<br>
+前払いの報酬だ。<br>
+<br>
+これを使えば君の意のままに操ることができるだろう。すでに魔術の一端を知っている君なら扱えるだろう。<br>
+ただし、時間は短い。時と場合をよく考え実施することを推奨する。<br>
+<br>
+―――<br>
+PL向けルルブP259 （支配の呪文が記載されていた。）">＜目星＞</button>
+            <div id="output14"></div>
+            </p>
+            <p>
+                <br>あたりを見渡す <span class="important-span">【HO：支え繋ぐもの】のみ成功したらクリック可能</span><br>
+                <button class="choice-btn" data-output="output2" data-text="
+辺りを見渡しふと壁に寄りかかる。がこんと音がした。そのまま勢いよく倒れてしまうだろう。壁が回転した。<br>
+＜回避＞<br>
+→失敗でHP－１<br>
+<br>
+そこは小部屋のようで、窓がある。しかし、鉄格子があるため外へは出られないようだ。<br>
+<br>
+＜アイデア＞<br>
+→成功したら、【成功アイコン】をクリック<br>
+">＜幸運＞
+                </button>
+            <div id="output2"></div>
+            </p>
+
+            <p>
+                <br>【探索のアイコン】＊１の部屋の窓＊ <span class="important-span">詳しく見る</span><br>
+                <button class="choice-btn" data-output="output5" data-text="
+【１の部屋―窓】（自動取得）<br>
+窓のカーテンを開けてみる。すると現れたのは壁だ。ただカーテンレールがあり、カーテンがかけられているだけの窓枠だった。
+">＜自動取得＞
+                </button>
+            <div id="output5"></div>
+            </p>
+
+            <p>
+                <br>【成功のアイコン】 <span class="important-span">指示があった場合のみクリック</span><br>
+                <button class="choice-btn" data-output="output3" data-text="
+【１の部屋】（幸運＋アイデア成功）
+この館に来た際に一ノ瀬は確かに外が雨だと分かっていた。つまり、ここから外を見ていたということだろう。
+">【成功のアイコン】
+                </button>
+            <div id="output3"></div>
+            </p>
+
+            <br>【探索のアイコン】＊クローゼット＊ <span class="important-span">成功したらクリック</span><br>
+            <button onclick="showSpoiler('spoilerBox1')" class="choice-btn">＜目星1/2＞</button>
+            ※他の部屋のクローゼットを探索している場合は、通常の＜目星＞<br>
+            <div id="spoilerBox1" style="display:none; margin-top:10px;">
+                <div style="max-height: none; overflow-y: visible;">
+
+                    <p> 【秘密のクローゼット】<br>
+                        あなたたちは好奇心によるものか、はたまた必要にかられてかクローゼットをよく見てみる。<br>
+                        ふと気が付く。クローゼットの底の一部が壁側に押せる（スライドできる）のだ。それは取手がなく普通に使っていれば気が付かないものだろう。
+                        スライドさせれば、そこから壁側へ通じることができそうだが狭い。子供なら通れるかもしれないが、大人では無理だろう。<br>
+                        <br>
+                        PLへ<br>
+                        スクリーンパネル一覧から【スクリーンパネルE】と【緑の扉】を表示させてください。<br>
+                        <span class="important-span">本ファイルではすでに【スクリーンパネルE】の非公開にした画像が表示されています。</span><br><br>
+                        【緑の扉】＊＊＊要約<br>
+                        <span class="important-span">この扉はSIZ８以下のみが通ることが可能</span><br>
+                        ＊入り方＊<br>
+                        ・見つけた場所に「再び訪れる」<br>
+                        <span class="important-span">※クローゼット目星成功した次の探索時間以降に入れる　<br>
+                            ※見つけた探索時間内は、時間が足りないものとして調べることができない。</span><br>
+                        ・館内地図の上にある【緑の扉】をクリック<br>
+                        ・SIZ９以上はお留守番扱い<br>
+                        ・再び訪れた際に他の招待客がいた場合は行くことができない<br>
+                    </p>
+                </div>
+                <img src="../img/BG/パネル２.jpeg" alt="パネルE" width="60%" style="display: block; margin: auto;">
+            </div><br>
+            <br>壁の額に目を向けた <span class="important-span">詳しく見る</span><br>
+            <button onclick="showSpoiler('spoilerBox2')" class="choice-btn">＜自動取得＞</button>
+            <div id="spoilerBox2" style="display:none; margin-top:10px;">
+                <div style="max-height: 300px; overflow-y: auto;">
+                    <p> 【１の部屋の額】<br>
+                        ルドベキア　それは理由<br>
+                        ハナズオウ　それは伝書鳩<br>
+                        ロゼリア　　それは何処にも無い<br>
+                        アルメリア　それは不要<br></p>
+                </div>
+                <img src="../img/BG/kabe1.jpeg" alt="【部屋の額】" width="60%" style="display: block; margin: auto;">
+            </div>
+            <br>
+            <script>
+                function updateHeight() {
+                    const height = document.body.scrollHeight;
+                    parent.postMessage({ iframeHeight: height }, "*");
+                }
+
+                function showSpoiler(id) {
+                    const box = document.getElementById(id);
+                    box.style.display = "block";
+
+                    const img = box.querySelector("img");
+                    if (img && !img.complete) {
+                        img.onload = () => setTimeout(updateHeight, 50);
+                    } else {
+                        setTimeout(updateHeight, 50);
+                    }
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(updateHeight, 50);
+                });
+            </script>
+
+
+            <br>
+
+
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+
+
+<!-- コンテンツ -->
+
+</html>

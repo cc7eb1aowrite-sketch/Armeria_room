@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    食堂
+  </title>
+  <link rel="stylesheet" href="../css/style_common.css">
+  <link rel="stylesheet" href="../css/style_sidebar.css">
+  <link rel="stylesheet" href="../css/style_content.css">
+
+</head>
+
+<body>
+  <!--/サイドメニュー-->
+  <div id="sub">
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="../../アルメリアは求めない.html">
+            <font size="4">
+              TOPファイルに戻る
+            </font>
+          </a>
+          <h1>
+          </h1>
+          <br>
+        <li><a href="0326探索②.html">〘Next Scene〙</a></li>
+        <br><br>※ネタバレあり<br>探索個所の説明まで進んでから<p>
+          <li><a href="mokuji.html">目次に戻る</a></li>
+        </p>
+  </div>
+  <!--/sub-->
+  <!--C+S+H htmlプレビュー-->
+  <!--/メインー-->
+  <div id="container">
+    <div id="main">
+      <h2 class="close">
+        食堂
+      </h2>
+      <!--区切り-->
+      <section class="box">
+        <h4 id="setu1">scene名：0326_C_02_食堂</h4>
+        <br>
+        <div class="bor2">
+          【食堂】 <br>
+            九重と話すことにした。彼女は唇をかみしめ俯くことだろう。<br><br>
+          以下の内容を聞いた。 <br>
+          <P>
+            <button onclick="showSpoiler()" class="choice-btn">①館の人と事件前夜について</button>
+
+          <div id="spoilerBox" style="display:none; margin-top:10px;">
+            <div style="max-height: 300px; overflow-y: auto;">
+              <p>
+                【0326　九重から聞いた話】<br>
+                ①館の人と事件前夜について<br>
+                九重は口にしていく。<br>
+                <br>
+
+                <a href="../pdf/0326_九重_聴取.pdf" target="_blank" rel="noopener noreferrer">▶ 九重
+                  聴取記録（0326）</a>
+              </p>
+            </div>
+          </div>
+
+          </P>
+          <p>
+            <button class="choice-btn" data-output="output4" data-text="
+              【0326　九重から聞いた話】<br>
+②志知沢七について<br>
+「・・・。志知沢さん、いつもご飯の準備を手伝ってくださって。美味しいって、こんなに美味しいモノ初めてって喜んでくれて。
+何も知らない子供のようでした」">②志知沢七について
+            </button>
+          <div id="output4"></div>
+
+          </p>
+                    <p>
+            <button class="choice-btn" data-output="output5" data-text="
+              【0326　九重から聞いた話】<br>
+③もしも<br>
+「朝が来るのが怖いんです。毎日誰かがいなくなるから。・・・間違えてはいけないのでしょうか。もし、もし、いえ、過ぎたことを言いました。忘れてください。仕事をしなくてはいけません、仕事を仕事をしないと、だって仕事をしないときっと明日は私だから」">③もしも
+            </button>
+          <div id="output5"></div>
+
+          </p>
+        </div>
+       <p> 話を終えたら<br>
+          >> <a href="0326探索②.html"> 〘Next Scene〙</a>をクリック <br>
+        </p>
+        <p>
+          <img src="../img/BG/BG_食堂.jpeg" width="60%"
+            style="display: block; margin-left: auto; margin-right: auto;"><br>
+
+        </p>
+      </section>
+    </div>
+
+  </div>
+  <script>
+    function showSpoiler() {
+      document.getElementById("spoilerBox").style.display = "block";
+    }
+
+    function showSpoiler2() {
+      document.getElementById("spoilerBox2").style.display = "block";
+    }
+  </script>
+  <!--/container-->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>
